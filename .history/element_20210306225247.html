@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用css3实现更漂亮的DIV气泡</title>
+    <style>
+        /* 如第一个css3样式显示的，是一个被分成四块的正方形。想要得到一个朝向向上的尖角，实质是将左、上、右隐形。
+        具体代码请见css3的第二段。
+        .element {
+        width: 0;
+        height: 0;
+        border-top: 20px solid red;
+        border-right: 20px solid blue;
+        border-bottom: 20px solid yellow;
+        border-left: 20px solid green;
+     } */
+
+     .element{
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #727171;
+    border-left: 20px solid transparent;
+  }
+    </style>
+</head>
+<body>
+    <div class="element"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用css3实现更漂亮的DIV气泡</title>
+    <style>
+      /* 如第一个css3样式显示的，是一个被分成四块的正方形。
+        想要得到一个朝向向上的尖角，实质是将左、上、右隐形。
+        具体代码请见css3的第二段。
+        .element {
+        width: 0;
+        height: 0;
+        border-top: 20px solid red;
+        border-right: 20px solid blue;
+        border-bottom: 20px solid yellow;
+        border-left: 20px solid green;
+     } */
+
+      /* 修改过后的小箭头 */
+      .element {
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #727171;
+        border-left: 20px solid transparent;
+      }
+      /* 定义外部盒子模型wrapper */
+      .wrapper {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        margin: 100px;
+        border: 5px solid #4999ce;
+        background-color: #c1d9e9;
+        border-radius: 15px;
+      }
+
+      /* 加入第一个伪元素，::before
+先设置一个和外圈颜色一样的小三角 */
+      .wrapper:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-bottom-color: #4999ce;
+        position: absolute;
+        top: 0;
+        right: 20%;
+        margin-top: -44px;
+      }
+      /* 加入第二个伪元素::after
+ 和内圈颜色一样的更小一点的三角，实现一个漂亮的箭头的形式 */
+      .wrapper:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-bottom-color: #c1d9e9;
+        position: absolute;
+        top: 0;
+        right: 20%;
+        margin-top: -36px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="element"></div>
+    <div class="wrapper"></div>
+  </body>
+</html>
