@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width,
+initial-scale=1.0"> <title>清除浮动</title> <style>
+ * {
+margin: 0;
+padding: 0;
+ }
+.outer {
+width: 80vw;
+margin: 0 auto;
+background-color: #2a6288;
+padding: 10px;
+/* 解决方法一：指定⾼度
+height: 220px; */
+
+/* 解决方法四：父级div定义 overflow：auto */
+overflow:auto;
+ }
+.outer .inner {
+width: 200px;
+height: 200px;
+background-color: #fff;
+margin: 10px;
+
+/* 因为没有指定父元素高度，从而形成的高度塌陷问题 */
+float: left;
+ }
+
+/* 解决方法二：在这个最后放一个div空标签
+ .clear {
+clear: both;
+ } */
+
+
+
+/* 解决方法三：使用父类div定义 伪类：after和zoom
+.clearfix {
+    zoom:1;
+}
+
+.clearfix:after{
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0; 
+} */
+
+
+</style>
+</head>
+
+<body> 
+    <!-- 使用第三种方法时，记得在此处引入 -->
+    <!-- <div class="outer clearfix">  -->
+    <div class="outer">
+    <div class="inner"></div>
+    <div class="inner"></div> 
+    <div class="inner"></div>
+    <div class="inner"></div> 
+    <div class="inner"></div>
+    <!-- 第二种方法里，记得引入这个div标签
+    <div class="clear"></div> -->
+</div>
+</body>
+</html>
