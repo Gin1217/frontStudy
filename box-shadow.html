@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决单行和多行溢出文本</title>
+    <style>
+        .box {
+            width: 200px;
+            background-color: #e48257;
+            /* 别漏了定义宽度 */
+        }
+
+        .single-line {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .multiple-line {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="single-line box shadow">我是单⾏⽂本溢出显示省略号略号</div>
+    <div class="multiple-line box">我是多⾏⽂本溢出显示省略号我是多⾏⽂本溢出显示省略号</div>
+</body>
+
+</html>

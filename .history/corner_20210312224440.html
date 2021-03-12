@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切角样式</title>
+    <style>
+        /* 切⻆样式 */
+        .flex {
+            display: flex;
+        }
+
+        .flex div {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+        }
+
+        /* 单个切⻆ */
+        .corner {
+            background: linear-gradient(-45deg, transparent 15px,
+                    #5588aa 0);
+        }
+
+        /* 多个切⻆ */
+        .corner2 {
+            background: linear-gradient(135deg, transparent 15px,
+                    #5588aa 0) top left,
+                linear-gradient(-135deg, transparent 15px, #5588aa 0) top right, linear-gradient(-45deg, transparent 15px,
+                    #5588aa 0) bottom right,
+                linear-gradient(45deg, transparent 15px, #5588aa 0) bottom left;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        /* 弧形切⻆ */
+        .corner3 {
+            background: radial-gradient(circle at top left,
+                    transparent 15px, #58a 0) top left,
+                radial-gradient(circle at top right, transparent 15px,
+                    #5588aa 0) top right,
+                radial-gradient(circle at bottom right, transparent 15px, #5588aa 0) bottom right,
+                radial-gradient(circle at bottom left, transparent 15px, #5588aa 0) bottom left;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="corner"></div>
+        <div class="corner2"></div>
+        <div class="corner3"></div>
+    </div>
+</body>
+
+</html>

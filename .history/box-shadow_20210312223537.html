@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决单行和多行溢出文本</title>
+    <style>
+        .box {
+            width: 200px; 
+            /* 别漏了定义宽度 */
+        }
+
+        .single-line {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="single-line box shadow">我是单⾏⽂本溢出显示省略号略号</div>
+</body>
+
+</html>
