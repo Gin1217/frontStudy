@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet的使用</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet</title>
+</head>
+
+<body>
+    <!-- 1.生成带id的标签,如：div#box，按tab键⽣成： -->
+    <div id="box"></div>
+    <!-- 2.⽣成带class的标签，如：div.container，按tab键⽣成： -->
+    <div class="container"></div>
+    <!-- 两者混合：div#header+div.main+div#footer.classname1.classname2，按tab键⽣成： -->
+    <div id="header"></div>
+    <div class="main"></div>
+    <div id="footer" class="classnam1 classname2"></div>
+    <!-- 3.⽣成⼦代结点：>，如⽤符号”<”⽣成⼦代结点，示例：div.header>ul.nav>li.nav-item，按tab键⽣成： -->
+    <div class="header">
+        <ul class="nav">
+            <li class="nav-item">
+
+            </li>
+        </ul>
+    </div>
+    <!-- 4.⽣成兄弟结点: +，如使⽤”+”⽣成兄弟，示例：div+p+bq，按tab键⽣成： -->
+    <div></div>
+    <p></p>
+    <blockquote></blockquote>
+    <!-- 5.⽣成⽗代结点：^，如使⽤”^”⽣成⽗代结点，示例：div>p>h1^h2，按tab键⽣成： -->
+    <div>
+        <p>
+        <h1></h1>
+        </p>
+        <h2></h2>
+    </div>
+    <!-- 6.重复元素：任何元素后⾯加上*n就会被重复n次，⽐如⽣成⼀个包含4个li的ul：ul>li.item*4，按tab键⽣成： -->
+    <ul>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+    <!-- 7.⽣成分组：()，⽤括号进⾏分组，这样可以更加明确要⽣成的结构，特别是层次关系，
+示例：<div>(header>ul>(li>a)*2)+footer>p,按tab键⽣成： -->
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+    <!-- 8.设置属性:[],属性写在[]内，属性当中采⽤等号赋值，多个属性⽤空格隔开.
+示例:a[href=”https://www.baidu.com” title=”百度⼀下，你就知道”],按tab键⽣成： -->
+    <a href="”https://www.baidu.com”" title="”百度⼀下，你就知道”"></a>
+    <!-- 9.对⽣成内容编号:$。可以使⽤美元符 $对项⽬编号，示例：ul>li#item$*5，按tab键⽣成： -->
+    <ul>
+        <li id="item1"></li>
+        <li id="item2"></li>
+        <li id="item3"></li>
+        <li id="item4"></li>
+        <li id="item5"></li>
+    </ul>
+    <!-- 上⾯的例⼦是从⼩到⼤，从⼤到⼩可以在$后加@－：ul>li#item$@-*5
+按tab键⽣成： -->
+    <ul>
+        <li id="item5"></li>
+        <li id="item4"></li>
+        <li id="item3"></li>
+        <li id="item2"></li>
+        <li id="item1"></li>
+    </ul>
+    <!-- 从指定序号3开始 ，⽣成5个ul>li.item$@3*5，按tab键⽣成： -->
+    <ul>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <li class="item6"></li>
+        <li class="item7"></li>
+    </ul>
+    <!-- 10.⽣成⽂本内容:{}。想要在⽣成的元素内插⼊内容，可以使⽤{},把⽂本内容放进去即可。
+示例：ul#id>li.classname{⽣成⽂本内容}*5，按tab键⽣成： -->
+    <ul id="id">
+        <li class="classname">⽣成⽂本内容</li>
+        <li class="classname">⽣成⽂本内容</li>
+        <li class="classname">⽣成⽂本内容</li>
+        <li class="classname">⽣成⽂本内容</li>
+        <li class="classname">⽣成⽂本内容</li>
+    </ul>
+    <!-- 11.⽣成随机⽂本：emmet的lorem将⽣成⼀段随机⽂本。示例：p.content>lorem -->
+    <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Commodi dicta, consequatur quod est magni sequi ex
+        voluptatum ea. Illo, esse
+        eaque libero magni minus optio nihil eius unde velit
+        vitae.
+    </p>
+</body>
+
+</html>
+</body>
+</html>
