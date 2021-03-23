@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/clearNoFloat.js"></script>
+    <h3>框框里只给输入数字，不可以输入汉字</h3>
+    <input type="text" onkeyup="clearNoFloat(this)">
+
+    <script src="/js/clearNoInt.js"></script>
+    <h3>这里只能输入整数，不能是小数</h3>
+    <input type="text" onkeyup="clearNoInt(this)">
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {}
+        })
+    
+    </script>
+</html>
